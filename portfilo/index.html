@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src = "logo_header.png" class="logo"  >
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#home">Services</a></li>
+                    <li><a href="#home">Portfolio</a></li>
+                    <li><a href="#home">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <h1 style="margin-top: 180px; font-size: 60px; color: rgb(193, 10, 10);">Hi , I'm <span style="color: rgb(224, 224, 228);"><u>Chinmay</u></span> <br>from BBSR,ODISHA</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic__2_-removebg-preview (1).png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="paragraph">Hello! I am Chinmay kumar Bhol, a passionate and dedicated MCA (Master of Computer Applications) student with a keen interest in exploring the realms of technology and software development. Currently pursuing my master's degree from ITER , SOA University. I am enthusiastic about leveraging my skills to contribute meaningfully to the world of computing.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span> Programming Languages</span><br> C , JAVA , HTML , CSS</li>
+                            <li><span> Databases</span><br> MySql , ORACLE</li>
+                            <li><span> Technologies</span><br> Visual studio code , Eclipse , git and github</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span> AMCAT</span><br>  Data Processing Specialist</li>
+                            <li><span> AMCAT</span><br>  Software Development Trainee</li>
+                            <li><span> Coding Ninjas</span><br> Core Java</li>
+                            <li><span>Era Digital</span><br>Full-Stack Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-24</span><br>Masters in Computer Application</li>
+                            <li><span> 2018-21</span><br>Bachelor of Science (Mathematics)</li>
+                            <li><span>2016-18 </span><br>12th Science</li>
+                            <li><span>2016</span><br>10 th </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
